@@ -51,7 +51,7 @@
 ### 调试关键点
 **微信相框** 调试需要注意一下几点：
 1. 开启设备蓝牙功能
-	```
+```
 	@RequestMapping(LOGIN)
     public String login(HttpServletRequest request, HttpServletResponse response) throws BusinessException {
         HttpRequestInfo requestInfo = new HttpRequestInfo(request);
@@ -66,7 +66,7 @@
 		HttpResponseUtil.setCookie(response, CookieConfig.COOKIE_ADMIN_VERIFY_CODE, user.getVerify(), WebSiteEnum.ROOT.getUrl(), "/",                                    CookieConfig.expireOneDaySeconds);
 		return returnUrl;
     }
-	```
+```
 2. 	重启设备
 3. 	至此相框已打开了蓝牙的功能可以进行相关操作
 >**注意：** 相关文件会以邮件附件形式发送
